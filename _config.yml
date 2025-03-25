@@ -1,2 +1,2 @@
-title: Foodsteps
-description: Our website is temporarily unavailable. Our team is working hard to restore service as soon as possible.
+gems:
+  - jekyll-redirect-from
