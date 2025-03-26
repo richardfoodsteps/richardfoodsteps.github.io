@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="refresh" content="0; url=https://my2.foodsteps.earth">
     <script>
-      window.location.href = "https://my2.foodsteps.earth";
+      // Get full path and query string from current URL
+      const path = window.location.pathname + window.location.search + window.location.hash;
+      const target = "https://my2.foodsteps.earth" + path;
+      window.location.replace(target);
     </script>
     <title>Redirecting...</title>
   </head>
   <body>
-    Redirecting to <a href="https://my2.foodsteps.earth">https://my2.foodsteps.earth</a>
+    <p>Redirecting to <a id="redirectLink" href="#">new location</a>...</p>
+    <script>
+      document.getElementById("redirectLink").href = target;
+      document.getElementById("redirectLink").textContent = target;
+    </script>
   </body>
 </html>
